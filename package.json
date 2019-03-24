@@ -1,0 +1,21 @@
+{
+	"name": "vue-tree-menu-item",
+	"version": "1.0.0",
+	"description": "Vue js component",
+	"main": "",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "abb"
+	},
+	"keywords": [
+		"vue",
+		"tree",
+		"menu",
+		"item"
+	],
+	"author": "WMACode",
+	"license": "MIT"
+}
