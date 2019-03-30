@@ -1,21 +1,31 @@
 {
-	"name": "vue-tree-menu-item",
-	"version": "1.0.0",
-	"description": "Vue js component",
-	"main": "",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "abb"
-	},
-	"keywords": [
-		"vue",
-		"tree",
-		"menu",
-		"item"
-	],
-	"author": "WMACode",
-	"license": "MIT"
+  "name": "vue-tree-menu-item",
+  "version": "1.1.0",
+  "description": "Vue js component",
+  "author": "WMACode",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "./dist/main.js",
+  "devDependencies": {
+    "rollup": "^1.7.2",
+    "rollup-plugin-commonjs": "^9.2.1",
+    "rollup-plugin-vue": "^4.7.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "keywords": [
+    "vue",
+    "tree",
+    "menu",
+    "item"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "abb"
+  },
+  "dependencies": {
+    "vue-awesome": "^3.5.1"
+  }
 }

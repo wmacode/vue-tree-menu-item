@@ -1,11 +1,11 @@
 <template>
-	<div>
-		<tree-menu :items="items"></tree-menu>
+	<div class="container">
+		<tree-menu :items="items" color="cadetblue"></tree-menu>
 	</div>
 </template>
 
 <script>
-	import TreeMenu from './treeMenuItem.vue'
+	import TreeMenu from './TreeMenuItem.vue'
 	export default {
 		components: { TreeMenu },
 		data() {
@@ -14,35 +14,35 @@
                 {
                     name: 'home',
                     label: 'Home',
-                    prepend: 'home',
+					prepend: 'home',
                     path: '/',
                     children: []
                 },
                 {
-                    name: 'category',
+					name: 'category',
                     label: 'Category',
-                    prepend: 'category',
+                    prepend: 'sitemap',
                     path: '/category',
                     opened: false,
                     children: [
                         {
                             name: 'category',
                             label: 'Sub-Category',
-                            prepend: 'category',
+                            prepend: 'sitemap',
                             path: '/category',
                             children: []
                         },
                         {
                             name: 'contactPhone',
                             label: 'Contact Phone',
-                            prepend: 'contact_phone',
+                            prepend: 'id-card',
                             path: '/contact_phone',
                             opened: false,
                             children: [
                                 {
                                     name: 'maria',
                                     label: 'Maria',
-                                    prepend: 'contact_phone',
+                                    prepend: 'id-card',
                                     path: '/maria',
                                     children: []
                                 },
@@ -67,28 +67,31 @@
                 {
                     name: 'contactPhone',
                     label: 'Contact Phone',
-                    prepend: 'contact_phone',
+                    prepend: 'id-card',
                     path: '/contact_phone',
                     opened: false,
                     children: [
                         {
                             name: 'maria',
                             label: 'Maria',
-                            prepend: '',
+							prepend: '',
+							append: 'id-card',
                             path: '/maria',
                             children: []
                         },
                         {
                             name: 'joao',
                             label: 'Joao',
-                            prepend: '',
+							prepend: '',
+							append: 'id-card',
                             path: '/joao',
                             children: []
                         },
                         {
                             name: 'camila',
                             label: 'Camila',
-                            prepend: '',
+							prepend: '',
+							append: 'id-card',
                             path: '/camila',
                             children: []
                         },
@@ -100,6 +103,16 @@
 	}
 </script>
 
-<style scoped>
-
+<style>
+	body{
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		width: 300px;
+		height: 100vh;
+		background-color: rgb(30, 30, 30);
+		background-color: #fff;
+		border-right: 3px solid #aaa;
+	}
 </style>

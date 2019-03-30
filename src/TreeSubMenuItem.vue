@@ -5,12 +5,12 @@
                 <div v-show="opened">
                     <div :class="{'tree-item': !dark, 'tree-item-dark': dark}" @click="setItemStatus(item)">
                         <div class="sub-menu-item" :style="{'margin-left': px + 'px'}">
-                            <div class="prepend"><v-icon>{{ item.prepend }}</v-icon></div>
+                            <div class="prepend"><v-icon :name="(item.prepend) ? item.prepend : null"/></div>
                             <div class="label" >{{ item.label }}</div>
                             <div class="append">
-                                <v-icon v-show="item.children.length && !item.opened">keyboard_arrow_right </v-icon>
-                                <v-icon v-show="item.children.length && item.opened">keyboard_arrow_down</v-icon>
-                                <v-icon v-show="!item.children.length">{{ item.append}}</v-icon>
+                                <v-icon v-show="item.children.length && !item.opened" name="angle-right" />
+                                <v-icon v-show="item.children.length && item.opened" name="angle-down" />
+                                <v-icon v-show="!item.children.length" :name="(item.append) ? item.append : null" />
                             </div>
                         </div>
                     </div>
@@ -28,8 +28,13 @@
 </template>
 
 <script>
+	import 'vue-awesome/icons/flag'
+	import 'vue-awesome/icons'
+	import Icon from 'vue-awesome/components/Icon'
+
     export default {
-        name: 'sub-item',
+		name: 'sub-item',
+		components: { 'v-icon': Icon },
         data() {
             return {
 
